@@ -1,4 +1,5 @@
 import React from "react";
+import formatPrice from "../helpers/formatPrice";
 
 const ShoppingCart = ( {productInfo, subTotal, tax, total} ) => {
   return (
@@ -9,7 +10,7 @@ const ShoppingCart = ( {productInfo, subTotal, tax, total} ) => {
             const { name, price } = item
           return (
             <li>
-              {name}: {price}
+              {name}: {formatPrice(price)}
             </li>
           );
         })}

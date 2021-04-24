@@ -1,7 +1,7 @@
 import React from "react";
-import productData from "../data/productData";
-import formatPrice from "../helpers/formatPrice";
 import "./Products.css"
+import formatPrice from "../helpers/formatPrice";
+import productData from "../data/productData";
 
 const Products = ({ cartItems }) => {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import CheckoutForm from "./Components/CheckoutForm";
+// import formatPrice from "./helpers/formatPrice";
 import Products from "./Components/Products";
 import ShoppingCart from "./Components/ShoppingCart";
 
