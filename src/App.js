@@ -68,7 +68,7 @@ class App extends React.Component {
           tax={tax}
           total={total}
         />
-        <CheckoutForm />
+        <CheckoutForm total={total}/>
       </div>
     );
   }

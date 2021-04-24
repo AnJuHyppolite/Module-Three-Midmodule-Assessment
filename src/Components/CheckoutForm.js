@@ -20,7 +20,7 @@ class CheckoutForm extends React.Component {
     } else if (zipCode.length !== 5) {
       alert("Zip code is not valid.");
     } else {
-      alert(`Purchase complete. You will be charged ${total}. 
+      alert(`Purchase complete. You will be charged $${total}. 
                     Thank you for shopping at AnJu's Garage!`);
     }
   };
