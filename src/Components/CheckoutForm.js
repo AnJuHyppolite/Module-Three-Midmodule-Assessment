@@ -1,4 +1,5 @@
 import React from "react";
+import "./CheckoutForm.css";
 
 class CheckoutForm extends React.Component {
   state = {
@@ -37,16 +38,17 @@ class CheckoutForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <h2>Checkout</h2>
           <label htmlFor="firstName">First Name</label>
+          <br />
           <input
             onChange={this.handleChange}
             id="firstName"
             name="firstName"
-            firstName="firstName"
             value={firstName}
             placeholder="First Name"
           />
           <br />
           <label htmlFor="lastName">Last Name</label>
+          <br />
           <input
             onChange={this.handleChange}
             id="lastName"
@@ -56,6 +58,7 @@ class CheckoutForm extends React.Component {
           />
           <br />
           <label htmlFor="email">Email</label>
+          <br />
           <input
             onChange={this.handleChange}
             id="email"
@@ -65,6 +68,7 @@ class CheckoutForm extends React.Component {
           />
           <br />
           <label htmlFor="creditCard">Credit Card</label>
+          <br />
           <input
             onChange={this.handleChange}
             id="creditCard"
@@ -74,6 +78,7 @@ class CheckoutForm extends React.Component {
           />
           <br />
           <label htmlFor="zipCode">Zip Code</label>
+          <br />
           <input
             onChange={this.handleChange}
             id="zipCode"

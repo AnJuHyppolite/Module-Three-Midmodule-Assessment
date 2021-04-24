@@ -1,15 +1,15 @@
 import React from "react";
 import formatPrice from "../helpers/formatPrice";
 
-const ShoppingCart = ( {productInfo, subTotal, tax, total} ) => {
+const ShoppingCart = ({ productInfo, subTotal, tax, total }) => {
   return (
     <div>
       <h2>Cart</h2>
       <ul>
         {productInfo.map((item) => {
-            const { name, price } = item
+          const { name, price, id } = item;
           return (
-            <li>
+            <li key={id}>
               {name}: {formatPrice(price)}
             </li>
           );

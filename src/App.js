@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import CheckoutForm from "./Components/CheckoutForm";
-// import formatPrice from "./helpers/formatPrice";
 import Products from "./Components/Products";
 import ShoppingCart from "./Components/ShoppingCart";
 
@@ -21,7 +20,6 @@ class App extends React.Component {
     const { productInfo } = this.state;
     productInfo.forEach((purchase) => {
       subTotal += purchase.price;
-      // debugger
     });
     return subTotal.toFixed(2);
   };
@@ -62,13 +60,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <Products cartItems={this.addToCart} />
-        <ShoppingCart
-          productInfo={productInfo}
-          subTotal={subTotal}
-          tax={tax}
-          total={total}
-        />
-        <CheckoutForm total={total}/>
+        <div className="Rightside">
+          <ShoppingCart
+            productInfo={productInfo}
+            subTotal={subTotal}
+            tax={tax}
+            total={total}
+          />
+          <CheckoutForm total={total} />
+        </div>
       </div>
     );
   }
