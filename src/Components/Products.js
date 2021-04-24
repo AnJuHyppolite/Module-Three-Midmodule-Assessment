@@ -1,12 +1,13 @@
 import React from "react";
 import productData from "../data/productData";
 import formatPrice from "../helpers/formatPrice";
+import "./Products.css"
 
 const Products = ({ addToCart }) => {
   return (
     <div>
       <h1>My Garage Sale</h1>
-      <ul>
+      <ul className="Products">
         {productData.map((product) => {
           const { name, price, img, description } = product;
           return (

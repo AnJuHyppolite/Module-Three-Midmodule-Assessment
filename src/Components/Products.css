@@ -1,0 +1,14 @@
+.Products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Products li {
+    list-style: none;
+    /* height: 150px; */
+    /* weight: 150px; */
+}
+
+button:hover{
+    cursor: pointer;
+}

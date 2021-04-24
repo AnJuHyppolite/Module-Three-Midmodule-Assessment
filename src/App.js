@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
+import CheckoutForm from "./Components/CheckoutForm";
 import Products from "./Components/Products";
+import ShoppingCart from "./Components/ShoppingCart";
 
 class App extends React.Component {
   state = { productInfo: [] }
@@ -13,13 +15,16 @@ class App extends React.Component {
       }
     })
   }
+
   render() {
+    const { productInfo } = this.state
 
 
   return (
-    <div>
-    <h1>Hello, world!</h1>;
+    <div className="App">
   <Products cartItems={this.addToCart}/>
+  <ShoppingCart productInfo={productInfo}/>
+  <CheckoutForm />
   </div>
   )
 
