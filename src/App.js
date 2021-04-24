@@ -38,13 +38,19 @@ class App extends React.Component {
   };
 
   getTotal = () => {
-    let subtotal = this.getSubTotal();
-    let tax = this.getTax();
+    const { productInfo } = this.state;
+    let subTotal = 0;
+    let taxRate = 0.05;
+    let tax = 0;
     let total = 0;
-    total = subtotal + tax;
-    return total;
-  };
+    productInfo.forEach((purchase) => {
+      subTotal += purchase.price;
+      tax = subTotal * taxRate;
+      total = subTotal + tax;
+    });
 
+    return total.toFixed(2);
+  };
 
   render() {
     const { productInfo } = this.state;

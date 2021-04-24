@@ -12,7 +12,7 @@ class CheckoutForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName, email, creditCard, zipCode } = this.state;
-    const { total} = this.props;
+    const { total } = this.props;
     if (!firstName || !lastName || !email) {
       alert("Input is not valid. Please complete all the fields.");
     } else if (creditCard.length !== 16) {
