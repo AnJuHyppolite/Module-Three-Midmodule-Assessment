@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShoppingCart = ( {productInfo} ) => {
+const ShoppingCart = ( {productInfo, subTotal, tax, total} ) => {
   return (
     <div>
       <h2>Cart</h2>
@@ -14,9 +14,9 @@ const ShoppingCart = ( {productInfo} ) => {
           );
         })}
       </ul>
-      <h3>Subtotal: </h3>
-      <h3>Tax: </h3>
-      <h3>Total: </h3>
+      <h3>Subtotal: ${subTotal}</h3>
+      <h3>Tax: ${tax}</h3>
+      <h3>Total: ${total}</h3>
     </div>
   );
 };

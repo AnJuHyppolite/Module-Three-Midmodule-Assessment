@@ -12,6 +12,7 @@ class CheckoutForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName, email, creditCard, zipCode } = this.state;
+    const { total} = this.props;
     if (!firstName || !lastName || !email) {
       alert("Input is not valid. Please complete all the fields.");
     } else if (creditCard.length !== 16) {
@@ -19,7 +20,7 @@ class CheckoutForm extends React.Component {
     } else if (zipCode.length !== 5) {
       alert("Zip code is not valid.");
     } else {
-      alert(`Purchase complete. You will be charged X. 
+      alert(`Purchase complete. You will be charged ${total}. 
                     Thank you for shopping at AnJu's Garage!`);
     }
   };
