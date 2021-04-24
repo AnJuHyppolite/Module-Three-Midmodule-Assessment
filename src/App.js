@@ -19,9 +19,10 @@ class App extends React.Component {
     let subTotal = 0;
     const { productInfo } = this.state;
     productInfo.forEach((purchase) => {
-      subTotal += purchase;
+      subTotal += purchase.price;
+      // debugger
     });
-    return subTotal;
+    return subTotal.toFixed(2);
   };
 
   getTax = () => {
@@ -30,17 +31,20 @@ class App extends React.Component {
     let taxRate = 0.05;
     let tax = 0;
     productInfo.forEach((purchase) => {
-      subTotal += purchase;
+      subTotal += purchase.price;
       tax = subTotal * taxRate;
     });
-    return tax;
+    return tax.toFixed(2);
   };
 
   getTotal = () => {
+    let subtotal = this.getSubTotal();
+    let tax = this.getTax();
     let total = 0;
-    total = this.getSubTotal() + this.getTax();
+    total = subtotal + tax;
     return total;
   };
+
 
   render() {
     const { productInfo } = this.state;

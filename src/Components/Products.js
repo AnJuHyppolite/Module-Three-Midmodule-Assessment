@@ -3,7 +3,7 @@ import productData from "../data/productData";
 import formatPrice from "../helpers/formatPrice";
 import "./Products.css"
 
-const Products = ({ addToCart }) => {
+const Products = ({ cartItems }) => {
   return (
     <div>
       <h1>My Garage Sale</h1>
@@ -14,7 +14,7 @@ const Products = ({ addToCart }) => {
             <li>
               <h2>{name}</h2>
               <p>Price: {formatPrice(price)}</p>
-              <button onClick={() => addToCart({ name, price })}>Add To Cart</button>
+              <button onClick={() => cartItems({ name, price })}>Add To Cart</button>
               <img src={img} alt="product" />
               <p>{description}</p>
             </li>
